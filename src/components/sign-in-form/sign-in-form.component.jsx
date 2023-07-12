@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./sign-in-form.styles.scss";
+import { SignUpContainer, ButtonsContainer } from "./sign-in-form.styles";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.component.jsx";
 
@@ -54,7 +54,7 @@ const SignInForm = () => {
 		setFormFields({ ...formFields, [name]: value });
 	};
 	return (
-		<div className="sign-up-container">
+		<SignUpContainer>
 			<h2>Already Have An Account?</h2>
 			<span>Sign In With Your Email and Password</span>
 			<form onSubmit={handleSubmit}>
@@ -75,7 +75,7 @@ const SignInForm = () => {
 					name="password"
 					value={password}
 				/>
-				<div className="buttons-container">
+				<ButtonsContainer>
 					<Button type="submit">Sign In</Button>
 					<Button
 						type="button"
@@ -84,9 +84,9 @@ const SignInForm = () => {
 					>
 						Sign In With Google
 					</Button>
-				</div>
+				</ButtonsContainer>
 			</form>
-		</div>
+		</SignUpContainer>
 	);
 };
 
