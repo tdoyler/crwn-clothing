@@ -1,7 +1,8 @@
 import { Fragment, useContext } from "react";
 // Fragment acts like a div within react although unlike a div it isn't render to the page. Just used to wrap the rest of the
 // component in
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+// Link removed from the above import
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
